@@ -1,0 +1,176 @@
+/*CSS Stylesheet T.O.C. - Table of contents
+Created XX April XXXX
+Last update April XX: 
+
+
+Compatible Browser:
+Firefox V.85.0.2 (64-bit)
+Chrome V.89.0.4389.90 (Build oficial) (64 bits)
+Edge V.89.0.774.54 (Compilación oficial) (64 bits)
+Safari V. 
+
+
+=RESET % CONDITIONAL COMMENT
+=GENERAL
+=LAYOUT:
+=PAGES
+
+      =index
+
+/*--- General ---*/
+/*--- Header ---*/
+/*--- Navigation ---*/
+/*--- Main ---*/
+/*--- Aside ---*/
+/*--- Footer ---*/
+/*--- Revisar ---*/
+/*--- Error ---*/
+/*--- Media Query ---*/
+/*--- Animation CSS ---*/
+
+/*/
+
+
+/*--- General ---*/
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+   background-color: white;
+   box-sizing: border-box;
+}
+
+body {
+   font-size: 1.6rem;
+   font-family: "Source Sans Pro", sans-serif;
+   line-height: 1.6;
+}
+
+a {
+   text-decoration: none;
+   color: #3eb4d4;
+}
+
+a:hover {
+   border-bottom: 1px solid currentColor;
+}
+
+.container-table {
+   width: 100%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   max-width: 1080px;
+}
+
+.input-box {
+   margin: auto;
+   width: 95%;
+   color: black;
+   margin: auto;
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+.buscar-palabra {
+   display: inline;
+   margin: 0 2rem;
+}
+
+.input-table {
+   width: 30%;
+   padding: 0.5rem 3rem;
+   margin: 1rem auto;
+   border: 1px solid #737373;
+   border-radius: 20px;
+   font-size: 1.5rem;
+   outline: none;
+}
+
+.input-table::placeholder {
+   color: #737373;
+}
+
+.input-table:focus {
+   border: 1px solid #737373;
+   outline: none;
+}
+
+.table-try {
+   text-align: center;
+   border: 1px solid #737373;
+   padding: 0.3rem;
+   margin: 0 auto;
+   border-collapse: collapse;
+   width: 95%;
+}
+
+/*Style for the main header*/
+
+.tr-1 th {
+   padding: 1rem 0;
+   font-size: 2rem;
+   color: white;
+   background-color: #54c8e8;
+   border: 1px solid #737373;
+}
+
+/*Style for the region cell*/
+
+.table-try td {
+   padding: 0.4rem;
+   border: 0.1px solid #737373;
+}
+
+.top-tienda {
+   width: 210px;
+   text-align: center;
+}
+
+.top-region {
+   width: 110px;
+   text-align: center;
+}
+
+.top-direccion {
+   width: 518px;
+   text-align: center;
+}
+
+.top-horario {
+   width: 180px;
+   text-align: center;
+}
+
+.tr-2 {
+   background-color: #ececec;
+}
+
+.horario {
+   font-size: 1.4rem;
+}
+
+@media (max-width: 600px) {
+   .table-try {
+      font-size: 1rem;
+   }
+
+   .horario {
+      font-size: 0.8rem;
+   }
+
+   .tr-1 th {
+      font-size: 1.3rem;
+   }
+
+   .input-table {
+      width: 50%;
+   }
+
+   .table-try td {
+      vertical-align: middle;
+   }
+}

@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+
+      <title>Card product</title>
+
+      <!-- NORMALIZE-->
+      <link rel="stylesheet" href="_layout/normalize.css" />
+
+      <!--CSS-->
+      <link rel="stylesheet" href="_layout/main.css" />
+
+      <!--PRINT-->
+      <!-- <link rel="stylesheet" href="" media="print"> -->
+
+      <!--FAVICON-->
+      <link rel="icon" href="" />
+      <link rel="icon" href="" type="image/svg+xml" />
+
+      <meta name="author" content="Luis Guaiquirian" />
+      <meta
+         name="description"
+         content="Luis Guaiquirian is an apprentice web programmer, specializing in front-end developer, student, based in Santiago de Chile, Chile, apprentice, web programmer, Venezuelan web developer, Chilean, front-end web programmer"
+      />
+      <meta name="keywords" content="Luis, Guaiquirian, Santiago web programmer, front-end developer" />
+
+      <!--GOOGLE FONTS - SANS PRO-->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+         rel="stylesheet"
+      />
+
+      <!--
+    Luis Guaiquirian CHILE.
+    V:3.0
+
+    Launched: XX-XX-2022
+  -->
+      <!--FONT AWESOME-->
+   </head>
+   <body>
+      <script language="javascript">
+         function doSearch() {
+            var tableReg = document.getElementById("regTable");
+            var searchText = document.getElementById("searchTerm").value.toLowerCase();
+            for (var i = 1; i < tableReg.rows.length; i++) {
+               var cellsOfRow = tableReg.rows[i].getElementsByTagName("td");
+               var found = false;
+               for (var j = 0; j < cellsOfRow.length && !found; j++) {
+                  var compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                  if (searchText.length == 0 || compareWith.indexOf(searchText) > -1) {
+                     found = true;
+                  }
+               }
+               if (found) {
+                  tableReg.rows[i].style.display = "";
+               } else {
+                  tableReg.rows[i].style.display = "none";
+               }
+            }
+         }
+      </script>
+      <div class="container-table">
+         <div class="input-box">
+            <p class="buscar-palabra">Buscar:</p>
+            <input
+               class="input-table"
+               id="searchTerm"
+               type="text"
+               onkeyup="doSearch()"
+               placeholder="Región, ciudad, tienda, dirección"
+            />
+         </div>
+
+         <table class="table-try" id="regTable">
+            <thead>
+               <tr class="tr-1">
+                  <th class="top-tienda">Tienda</th>
+                  <th class="top-region">Región</th>
+                  <th class="top-direccion">Dirección</th>
+                  <th class="top-horario">Horario</th>
+               </tr>
+            </thead>
+            <tbody>
+               <!--FILA 1-->
+               <tr class="tr-2">
+                  <td class="tienda">Manquehue</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     ><a href="#"
+                        >Av. Manquehue Norte #1245.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 09:00 - 20:00</td>
+               </tr>
+               <!--FILA 2-->
+               <tr class="tr-1">
+                  <td class="tienda">Mall Plaza Vespucio</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     <a href="#">
+                        Av. Americo Vespucio #7110, Local: 444-445-446-447.
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           />
+                        </svg> </a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 3-->
+               <tr class="tr-2">
+                  <td class="tienda">Mall Florida Center</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     <a href="#"
+                        >Av. Vicuña Mackenna 6100, Local: 1090.
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 4-->
+               <tr class="tr-1">
+                  <td class="tienda">Portal La Dehesa</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     ><a href="#"
+                        >Av. La Dehesa #1445, Local: 2042.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 5-->
+               <tr class="tr-2">
+                  <td class="tienda">Mall Plaza Egaña</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     <a href="#">
+                        Av. Larrain 5862 La Reina, Local: B2016-B2020.
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 6-->
+               <tr class="tr-1">
+                  <td class="tienda">Parque Arauco</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"> <a href="#">Av. Kennedy 5413, Local: 152.<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-alt-fill"
+                    viewBox="0 0 16 16"
+                 >
+                    <path
+                       d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    /></svg></a
+           ></a></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 7-->
+               <tr class="tr-2">
+                  <td class="tienda">Alto las Condes</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     <a href="#"
+                        >Av. Kennedy 9001, Local: 1128.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 8-->
+               <tr class="tr-1">
+                  <td class="tienda">Costanera Center</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"> <a href="#">
+                     Av. Andres Bello N° 2464, Providencia, Local: 3181.
+                     <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 9-->
+               <tr class="tr-2">
+                  <td class="tienda">Mall Paseo Quilin</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     >
+                     <a href="#">Mar Tirreno 3349, Local: 1037.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 10-->
+               <tr class="tr-1">
+                  <td class="tienda">Jumbo Peñalolen</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     >
+                     <a href="#"> Sanchez Fontecilla 12000, Local: 1013.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 11-->
+               <tr class="tr-2">
+                  <td class="tienda">Mall Plaza Sur</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                    <a href="#"> 
+                     Av. Presidente Jorge Alessandri 20040, Local: 1026.
+                     <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 12-->
+               <tr class="tr-1">
+                  <td class="tienda">Baby Price Quilicura</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     >
+                     <a href="#"> San Ignacio N°901.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Dom. 09:00 - 19:00</td>
+               </tr>
+               <!--FILA 13-->
+               <tr class="tr-2">
+                  <td class="tienda">Arauco Buenaventura</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     > <a href="#"> San Ignacio N°300, Local: 130-131.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 14-->
+               <tr class="tr-1">
+                  <td class="tienda">Bis Patio Centro</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     >
+                     <a href="#">
+                     Moneda 1057.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Sab. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 15-->
+               <tr class="tr-2">
+                  <td class="tienda">Mall Espacio M.</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     >
+                     <a href="#">
+                     Compañía N° 1214, Santiago, Local: 119A.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Sab. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 16-->
+               <tr class="tr-1">
+                  <td class="tienda">Mall Arauco Maipu</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     > <a href="#"> Av. Americo Vespucio 399, Local: 325.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a
+            ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 17-->
+               <tr class="tr-2">
+                  <td class="tienda">Mall Plaza Oeste</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"> <a href="#"> 
+                     Av. Americo Vespucio 1501, Local: 158-162.<svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-geo-alt-fill"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                     /></svg></a>
+                  </td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 18-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Outlet Midmall Maipu</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     Camino Melipilla N°15900, Maipu, Local: 1025.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        />
+                     </svg>
+                  </td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 19-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Outlet Bis Cerrillos</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion"
+                     >Av. Lo Espejo 943.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 20-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Mall Plaza Norte</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     Av. Americo Vespucio 1737, Local: 2130-2134-2138.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        />
+                     </svg>
+                  </td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 21-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Easton Mall</td>
+                  <td class="region">Metropolitana</td>
+                  <td class="direccion">
+                     Av. Presidente Eduardo Frei Montalva 9719, Local: 102.
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 22-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Mall Plaza Antofagasta</td>
+                  <td class="region">Antofagasta</td>
+                  <td class="direccion"
+                     >Av. Balmaceda 2355, Local: 190-192-194.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 23-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Bis Coronel</td>
+                  <td class="region">Bio Bio</td>
+                  <td class="direccion"
+                     >Carlos Pratt Gonzalez N°913, Local: 1132.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 24-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Mall Plaza Calama</td>
+                  <td class="region">Calama</td>
+                  <td class="direccion"
+                     >Av. Balmaceda 3242, Local: 285.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 25-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Portal Chillan</td>
+                  <td class="region">Chillan</td>
+                  <td class="direccion">
+                     Carretera Longitudinal Norte 134, Local: 1017.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        />
+                     </svg>
+                  </td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 26-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Arauco Premium San Pedro</td>
+                  <td class="region">Concepción</td>
+                  <td class="direccion">
+                     Calle Portal san Pedro 4850, San Pedro de la Paz, Local: 5.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        />
+                     </svg>
+                  </td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 27-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Bis Concepción</td>
+                  <td class="region">Concepción</td>
+                  <td class="direccion">
+                     Av. Jorge Alessandri 3177, Concepción, Local: A 109-111.
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 28-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Mall del Centro Concepción</td>
+                  <td class="region">Concepción</td>
+                  <td class="direccion"
+                     >Barros Arana 1080, Local: 28-29-30.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 29-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Mall Plaza Copiapó</td>
+                  <td class="region">Copiapó</td>
+                  <td class="direccion"
+                     >Calle Maipu N°0110, Local: A-2061/A-2065.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 30-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Portal Copiapó</td>
+                  <td class="region">Copiapó</td>
+                  <td class="direccion"
+                     >Av. Copayapu 2406, Local: 1023.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 31-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Outlet Vivo Peñuelas</td>
+                  <td class="region">Coquimbo</td>
+                  <td class="direccion">
+                     Ruta 5 norte, regimiento Arica y Avda. Central, Peñuelas, Local: 1164-1168.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        />
+                     </svg>
+                  </td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 32-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Baby Price Coquimbo</td>
+                  <td class="region">Coquimbo</td>
+                  <td class="direccion"
+                     >Camino La Cantera N°2325, Local: 23.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--PFILA 33-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Mall Vivo Coquimbo</td>
+                  <td class="region">Coquimbo</td>
+                  <td class="direccion"
+                     >Varela N°1524, Local: 2240/2244.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 34-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Bis Curicó</td>
+                  <td class="region">Curicó</td>
+                  <td class="direccion"
+                     >Av. Bernardo ohiggins 201, Local: 41.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 09:30 - 20:30</td>
+               </tr> -->
+               <!--FILA 35-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Mall Plaza Los Angeles</td>
+                  <td class="region">Los Angeles</td>
+                  <td class="direccion"
+                     >Valdivia 440, Local: 214-215<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 36-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Portal Osorno</td>
+                  <td class="region">Osorno</td>
+                  <td class="direccion"
+                     >Plaza Yungay N°609, Local: 2072.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 37-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Mall Paseo Costanera</td>
+                  <td class="region">Puerto Montt</td>
+                  <td class="direccion"
+                     >Illapel 10, Local: 217A.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 38-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Espacio Urbano Punta Arenas</td>
+                  <td class="region">Punta Arenas</td>
+                  <td class="direccion">
+                     Av. Pdte. Eduardo Frei Montalva, Local: 154-156.
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 39-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Portal Belloto</td>
+                  <td class="region">Quilpué</td>
+                  <td class="direccion">
+                     Av. Ramón Freire 2414, Quilpue, Local: 1094.
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 09:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 40-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Portal Rancagua</td>
+                  <td class="region">Rancagua</td>
+                  <td class="direccion"
+                     >Carretera del Cobre 750, Local: 1026.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 41-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Mall Vivo San Fernando</td>
+                  <td class="region">San Fernando</td>
+                  <td class="direccion">
+                     Avda. Bernardo O´higgins N°701, Local: 2172-2176.
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 42-->
+               <!-- <tr class="tr-1">
+                  <td class="tienda">Mall Plaza Maule</td>
+                  <td class="region">Talca</td>
+                  <td class="direccion">
+                     Av. Circunvalación Oriente 1055, Local: 151.
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 43-->
+               <!-- <tr class="tr-2">
+                  <td class="tienda">Outlet Easton Temuco</td>
+                  <td class="region">Temuco</td>
+                  <td class="direccion"
+                     >Rudecindo Ortega 01738, Local: 1091.<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-geo-alt-fill"
+                        viewBox="0 0 16 16"
+                     >
+                        <path
+                           d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                        /></svg
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr> -->
+               <!--FILA 44-->
+               <tr class="tr-1">
+                  <td class="tienda">Outlet Vivo Temuco</td>
+                  <td class="region">Temuco</td>
+                  <td class="direccion"
+                     ><a href="#"
+                        >Las Quilas n°1605, Local: 1104-1108.
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 45-->
+               <tr class="tr-2">
+                  <td class="tienda">Portal Temuco</td>
+                  <td class="region">Temuco</td>
+                  <td class="direccion">
+                     <a href="#"
+                        >Av. Alemania 0671, Local: 1026.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 46-->
+               <tr class="tr-1">
+                  <td class="tienda">Mall Plaza de los Rios</td>
+                  <td class="region">Valdivia</td>
+                  <td class="direccion">
+                     <a href="#"
+                        >Arauco 561, Local: 167.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:30</td>
+               </tr>
+               <!--FILA 47-->
+               <tr class="tr-2">
+                  <td class="tienda">Bis Valdivia</td>
+                  <td class="region">Valdivia</td>
+                  <td class="direccion">
+                     <a href="#"
+                        >Errazuriz N°1040, Local: 1010.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 48-->
+               <tr class="tr-1">
+                  <td class="tienda">Bis San Antonio</td>
+                  <td class="region">Valparaiso</td>
+                  <td class="direccion">
+                     <a href="#"
+                        >Ramón Barros Luco N°105, Local: 5052.<svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+               <!--FILA 49-->
+               <tr class="tr-2">
+                  <td class="tienda">Arauco premium Curauma</td>
+                  <td class="region">Valparaiso</td>
+                  <td class="direccion">
+                     <a href="#">
+                        Avda. Lomas de la Luz N°4650, Local: 03-A.
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="currentColor"
+                           class="bi bi-geo-alt-fill"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                           /></svg></a
+                  ></td>
+                  <td class="horario">Lun. - Dom. 10:00 - 20:00</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>
