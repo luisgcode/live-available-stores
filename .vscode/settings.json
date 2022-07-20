@@ -1,4 +1,4 @@
 {
-  "git.autorefresh": false,
-  "git.enabled": false
+   "git.autorefresh": false,
+   "git.enabled": true
 }
